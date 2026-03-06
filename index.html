@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Locadora de Filmes</h1>
+        <button onclick="abrirModalFilme()">+ Novo Filme</button>
+    </header>
+
+    <main>
+        <h2>Catálogo de Filmes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Capa</th>
+                    <th>Título</th>
+                    <th>Gênero</th>
+                    <th>Ano</th>
+                    <th>Produtora</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="dadosFilmes"></tbody>
+        </table>
+    </main>
+
+    
+    <div id="modalFilme" class="modal">
+        <div class="modal-content">
+            <h2>Novo Filme</h2>
+            <input type="text" id="capa" placeholder="URL da capa">
+            <input type="text" id="titulo" placeholder="Título">
+            <input type="text" id="genero" placeholder="Gênero">
+            <input type="number" id="ano" placeholder="Ano">
+            <input type="text" id="produtora" placeholder="Produtora">
+            <div class="modal-buttons">
+                <button onclick="salvarFilme()">Salvar</button>
+                <button onclick="fecharModalFilme()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo!</h1>
+    </header>
+
+    <main class="home">
+        <h2>Digite o nome da sua locadora</h2>
+        <input type="text" id="nomeLocadora" placeholder="Ex: Cinemark">
+        <button onclick="salvarNome()">Confirmar</button>
+    </main>
+
+    <script>
+        function salvarNome() {
+            const nome = document.getElementById("nomeLocadora").value;
+            if (nome) {
+                localStorage.setItem("nomeLocadora", nome);
+                window.location.href = "index.html"; 
+            } else {
+                alert("Digite um nome para a locadora!");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
